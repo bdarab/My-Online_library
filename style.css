@@ -1,0 +1,42 @@
+/* font-family: 'Creepster', cursive;
+font-family: 'Scheherazade', serif;
+font-family: 'Yeseva One', cursive; */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(0, 255, 157) 65%, rgb(0, 255, 76) 100%);
+  font-family: 'Yeseva One', cursive;
+  font-size: 14px;
+}
+
+h1{
+  font-family: 'Creepster', cursive;
+  font-size: 64px;
+}
+
+span{
+  color:rgb(238, 100, 8)
+}
+
+.card{
+  height: 20%;
+  margin: 0.5%;
+  padding: 1%;
+}
+
+a.btn{
+  width: 100px;
+  height: 10%;
+}
+
+@media only screen and (max-width: 600px){
+  .card{
+    width: 100%;
+  }
+}
