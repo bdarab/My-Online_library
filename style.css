@@ -35,8 +35,20 @@ a.btn{
   height: 10%;
 }
 
-@media only screen and (max-width: 600px){
-  .card{
-    width: 100%;
-  }
+.success, .error {
+  color: white;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.success {
+  background: green;
+}
+
+.error {
+  background: red;
+}
+
+.isRead {
+  background: rgb(239, 247, 128);
 }
