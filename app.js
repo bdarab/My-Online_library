@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
@@ -32,9 +33,9 @@ class UI {
       <a href="#" class="btn btn-lg btn-success read">Read</a>
       <a href="#" class="btn btn-lg btn-danger delete">DEL</a>
     </div>
-
   `
     cardGroup.appendChild(card)
+    form.reset()
   }
 
   // Add UI Alert Method
@@ -48,6 +49,7 @@ class UI {
     // get Parent
     const container = document.querySelector('.container')
     // Get form
+    // eslint-disable-next-line no-shadow
     const form = document.querySelector('form')
     // Insert Alert
     container.insertBefore(div, h1)
@@ -68,17 +70,9 @@ class UI {
   markRead (target) {
     if (target.className === 'read') {
       target.parentElement.parentElement.classList.add('isRead')
+    }
   }
 
-
-
-
-
-  clearInput () 
-    title = ''
-    author = ''
-    pages = ''
-  }
 }
 
 
@@ -153,17 +147,11 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks)
       ui.showAlert('Please fill all the neccessary fields', 'error')
     } else {
       ui.displayBook(book)
-
-
-    // Add to Storage
-    Store.addBook(book)
-
-    // success
+      // Add to Storage
+      Store.addBook(book)
+      // success
       ui.showAlert('Your book was successfully added', 'success')
-      
-    // clear input fields
-      ui.clearFields()
-  }
-
+    }
     e.preventDefault()
   })
+
