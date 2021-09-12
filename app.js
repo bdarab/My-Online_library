@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable class-methods-use-this */
@@ -5,6 +7,9 @@
 
 const form = document.querySelector('form')
 const h1 = document.querySelector('.header')
+const isReadBtn = document.querySelector('read')
+
+
 
 // Creating Class Books
 class Books {
@@ -29,9 +34,9 @@ class UI {
     <div class="card-body">
       <h5 class="card-title">${book.title}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${book.author}</h6>
-      <p class="card-text">${book.numPages}</p>
+      <p class="card-text">${book.pages}</p>
       <a href="#" class="btn btn-lg btn-success read">Read</a>
-      <a href="#" class="btn btn-lg btn-danger delete">DEL</a>
+      <a href="" class="btn btn-lg btn-danger delete">DEL</a>
     </div>
   `
     cardGroup.appendChild(card)
@@ -49,7 +54,6 @@ class UI {
     // get Parent
     const container = document.querySelector('.container')
     // Get form
-    // eslint-disable-next-line no-shadow
     const form = document.querySelector('form')
     // Insert Alert
     container.insertBefore(div, h1)
@@ -59,22 +63,7 @@ class UI {
       document.querySelector('.alert').remove();
     }, 3000)
   }
-  
-  deleteBook (target) {
-    if (target.className === 'delete') {
-      // DOM Treversing
-      target.parentElement.parentElement.remove()
-    }
-  }
-
-  markRead (target) {
-    if (target.className === 'read') {
-      target.parentElement.parentElement.classList.add('isRead')
-    }
-  }
-
 }
-
 
 // Class Store for localStorage
 
@@ -152,6 +141,6 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks)
       // success
       ui.showAlert('Your book was successfully added', 'success')
     }
+
     e.preventDefault()
   })
-
