@@ -25,13 +25,14 @@ class UI {
 
     // Insert Card Text & HTML Element to UI
     card.innerHTML = `
-  <div class="card-body">
-    <h5 class="card-title">${book.title}</h5>
-    <p class="card-text" id="authorOutput">Author: ${book.author}</p>
-    <p class="card-text" style="color: gray;"><small>Number of Pages: ${book.pages}</small></p>
-    <a href="#" class="btn btn-success read">Read?</a>
-    <a href="#" class="btn btn-danger delete">DEL</a>
-  </div>
+    <div class="card-body">
+      <h5 class="card-title">${book.title}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${book.author}</h6>
+      <p class="card-text">${book.numPages}</p>
+      <a href="#" class="btn btn-lg btn-success read">Read</a>
+      <a href="#" class="btn btn-lg btn-danger delete">DEL</a>
+    </div>
+
   `
     cardGroup.appendChild(card)
   }

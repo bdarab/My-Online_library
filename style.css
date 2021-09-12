@@ -24,17 +24,28 @@ span{
   color:rgb(238, 100, 8)
 }
 
+.card-group{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
 .card{
-  height: 20%;
-  margin: 0.5%;
-  padding: 1%;
+  background-color: rgba(253, 245, 245, 0);
+  border: none;
+  outline: none;
+  margin: 1.5%;
 }
 
-a.btn{
-  width: 100px;
-  height: 10%;
+.card-body{
+  border: 1px solid black;
+  border-radius: 5%;
+  box-shadow: 2px 2px 5px black;
 }
 
+.card-body:hover{
+  box-shadow: .5px .5px 10px black;
+  transform: scale(1.01);
+}
 .success, .error {
   color: white;
   padding: 5px;
