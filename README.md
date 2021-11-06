@@ -1,4 +1,6 @@
-git<h1>Library app</h1>
+<h1>Library app</h1>
+
+<h2>Needs work on Read & Delete Buttons</h2>
 
 <h3>An Odin Project Assignment</h3>
 
